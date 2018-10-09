@@ -1,0 +1,59 @@
+# Project information
+site_name: Building Containerized Applications
+#site_description: 'A Material Design theme for MkDocs'
+#site_author: 'Martin Donath'
+#site_url: 'https://squidfunk.github.io/mkdocs-material/'
+
+# Repository
+#repo_name: 'squidfunk/mkdocs-material'
+#repo_url: 'https://github.com/squidfunk/mkdocs-material'
+
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: indigo
+  logo: #imgs/logo.png
+    icon: build
+
+markdown_extensions:
+- admonition
+- codehilite:
+    guess_lang: false
+    linenums: false
+- footnotes
+- toc:
+    permalink: true
+- pymdownx.caret
+- pymdownx.critic
+- pymdownx.details
+- pymdownx.inlinehilite
+- pymdownx.magiclink
+- pymdownx.mark
+- pymdownx.smartsymbols
+- pymdownx.superfences
+- pymdownx.tasklist:
+    custom_checkbox: true
+
+extra_css:
+  - 'stylesheets/critic.css'
+
+pages:
+- Introduction: index.md
+- One CodeBase, One Application: codebase.md
+- API First: api-first.md
+- Dependency Management: dependency-management.md
+- Build, Release, Run: build-release-run.md
+- Configuration: configuration.md
+- Logs: logs.md
+- Disposability: disposability.md
+- Backing services: backing-services.md
+- Environment parity: environment-parity.md
+- Admin processes: admin-processes.md
+- Port binding: port-binding.md
+- Stateless processes: stateless-processes.md
+- Concurrency: concurrency.md
+- Telemetry: telemetry.md
+- Authentication and Authorization: authn-and-authz.md
+
+
