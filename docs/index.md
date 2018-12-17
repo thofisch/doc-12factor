@@ -29,3 +29,7 @@ As many of these factors feed into each other, following one factor makes it eas
 Don't think about these guidelines as an all-or-nothing approach, but rather learn where and when to compromise when planning and implementing {==cloud-native/kubernetes/"cloud-friendly"==} applications. {>>should we allow for thought?<<}
 
 When you’re building a new application, force a decision as to why you should not build your application in a cloud-native way.
+
+## {==Cloud-Native vs Kubernetes vs "Cloud-Friendly"==}
+
+> At KubeCon, however, it’s clear this definition is shifting. The takeaway: ‘cloud native’ is more than ‘cloud only.’ It means bringing cloud-centric best practices to software and IT generally, whether that be in the cloud or on premises.
