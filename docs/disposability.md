@@ -1,6 +1,6 @@
 # Disposability
 
-When a {==cloud-native/Kubernetes/"cloud-friendly"==} application is disposable, it means they can be started or stopped rapidly.
+When a cloud-native application is disposable, it means they can be started or stopped rapidly.
 
 An application cannot scale, deploy, release, or recover rapidly, if it cannot start rapidly and shut down gracefully.
 

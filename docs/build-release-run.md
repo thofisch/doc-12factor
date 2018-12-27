@@ -40,6 +40,6 @@ The run phase is done by the {==cloud provider/PaaS/Kubernetes==}.
 When an application is running, the platform is responsible for keeping it alive, monitoring its health, aggregating its logs, as well as a lot of other administrative tasks like dynamic scaling and fault tolerance.
 
 !!! info "Run locally"
-    In order for developers to feel unhindered while working on {==cloud-native/Kubernetes/"cloud-friendly"==} applications, it is {==almost==} always worth the extra effort of ensuring that developers can run an application locally on their workstations, while still allowing it to be deployed via CD pipeline.
+    In order for developers to feel unhindered while working on cloud-native applications, it is {==almost==} always worth the extra effort of ensuring that developers can run an application locally on their workstations, while still allowing it to be deployed via CD pipeline.
 
     Using Docker and/or Minikube help create near-clones of production systems.

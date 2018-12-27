@@ -2,7 +2,7 @@
 
 A codebase is a source code repository or a set of repositories that share a common root.
 
-A {==Cloud-native/Kubernetes/"cloud-friendly"==} application always consist of a single codebase that is tracked in a version control system.
+A cloud-native application always consist of a single codebase that is tracked in a version control system.
 
 The single codebase for an application is used to produce [immutable releases](/design-build-release-run/#release) for different [environments](/environment-parity).
 

@@ -1,14 +1,13 @@
 # Dependency Management
 
-A {==cloud-native/Kubernetes/"cloud-friendly"==} application must be self-contained, where everything we need to run our application is contained within a single build artifact. Applications can no longer assume that a server will have everything they need. Instead, applications need to bring their dependencies with them.
+A cloud-native application must be self-contained, where everything needed to run the application is contained within a single build artifact. Applications can no longer assume that a server will have everything they need. Instead, applications need to bring their dependencies with them.
 
 E.g., never rely on the implicit existence of system-wide packages, or facilities like the Global Assembly Cache.
 
-
 !!! tip "Repeatable deployments"
     Managing application dependencies is all about repeatable deployments.
-    
-    Nothing about the runtime into which an application is deployed should be assumed that isn’t automated. 
+
+    {==Nothing about the runtime into which an application is deployed should be assumed that isn’t automated. -- huh? ==}
 
 ## Kubernetes
 

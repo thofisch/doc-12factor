@@ -1,10 +1,10 @@
 # Telemetry
 
-Telemetry should be an essential part of any {==cloud-native/Kubernetes/"cloud-friendly"==} application.
+Telemetry should be an essential part of any cloud-native application.
 
 Building applications on your workstation lets you can inspect the inside of your application, execute a debugger, and perform other tasks that give you visibility deep within your applications and its behavior.
 
-This is not possible with a {==cloud-native/Kubernetes/"cloud-friendly"==}, because of a number of reasons:
+This is not possible with a cloud-native, because of a number of reasons:
 
 * Your application instance might move with little or no warning.
 * You could start with one instance of your app, and a few minutes later, you might have hundreds of copies of your application running.

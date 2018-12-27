@@ -1,6 +1,6 @@
 # Concurrency
 
-{==Cloud-native/Kubernetes/"cloud-friendly"==} applications should scale out using the process model.
+Cloud-native applications should scale out using the process model.
 
 Instead of making a single big process even larger, you create multiple processes, and then distribute the load of the application among those processes.
 

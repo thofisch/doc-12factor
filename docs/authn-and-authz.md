@@ -1,6 +1,6 @@
 # Authentication and Authorization
 
-Security is a vital part of any application and environment, and should never be an afterthought. A {==cloud-native/Kubernetes/"cloud-friendly"==} application is a secure application, and with tools like OAuth2, OpenID Connect, various SSO servers and standards, as well as a near infinite supply of language-specific authentication and authorization libraries, security should be something that is baked into the application’s development from day one, and not added as a bolt-on project after an application is running in production.
+Security is a vital part of any application and environment, and should never be an afterthought. A cloud-native application is a secure application, and with tools like OAuth2, OpenID Connect, various SSO servers and standards, as well as a near infinite supply of language-specific authentication and authorization libraries, security should be something that is baked into the application’s development from day one, and not added as a bolt-on project after an application is running in production.
 
 Even if the only reason you implement security in your application is so you have an audit trail of which user made which data change, that alone is benefit enough to justify the relatively small amount of time and effort it takes to secure your application’s endpoints.
 
