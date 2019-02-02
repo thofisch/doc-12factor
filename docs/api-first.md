@@ -1,6 +1,6 @@
 # API First
 
-Regardless of the type of application the ultimate goal might very well be to have that application be a participant in an ecosystem of services.
+Regardless of the type of application, the ultimate goal might very well be to have that application be a participant in an ecosystem of services.
 
 Even if, at the outset, the service is not a part of a larger ecosystem, the discipline of starting development at the API level still pays enough dividends to make it worth the effort.
 
@@ -10,4 +10,4 @@ To avoid integration failures, API first gives teams the ability to work against
 
 If we treat and develop all applications as [backing services](/backing-services), and designed them API-first; the system will be free to grow, adapt to new load and demand, and accommodate new consumers without having to re-architect yet another closed system.
 
-{>>Link to our in-depth API First guidelines - for now the google it<<}
+{>>Link to our in-depth API First guidelines<<}
