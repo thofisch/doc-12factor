@@ -1,12 +1,12 @@
 # One Codebase, One Application
 
-A codebase is a source code repository or a set of repositories that share a common root.
+A codebase is a source code repository.
 
 A cloud-native application always consist of a single codebase that is tracked in a version control system.
 
-The single codebase for an application is used to produce [immutable releases](/design-build-release-run/#release) for different [environments](/environment-parity).
+The single codebase for an application is used to produce [immutable releases](/build-release-run/#release) for different [environments](/environment-parity).
 
-One codebase, one application does not mean that is not allowed to share code across multiple applications; it just means that the shared code is yet another codebase.
+*One codebase, one application* does not mean that it is not allowed to share code across multiple applications; it just means that the shared code is yet another codebase.
 
 ## Violations
 
