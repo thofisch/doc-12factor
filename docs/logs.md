@@ -4,9 +4,10 @@ Treat logs as event streams, i.e., a time-ordered sequence of events emitted fro
 
 A cloud-native application never concerns itself with routing or storage of its output stream, but simply writes all of its log entries to `stdout` and `stderr`.
 
-Decoupling the knowledge of log storage, processing, and analysis from the code, simplifies the codebase, allows changing the way in which logs are store and processed without modifying the application, and helps with elastic scalability.
+Decoupling the knowledge of log storage, processing, and analysis from the code, simplifies the codebase, and allows changing the way in which logs are store and processed without modifying the application, and helps with elastic scalability.
 
 The aggregation, processing, and storage of logs is a non-functional requirement that is handled by the {==cloud provider/PaaS/Kubernetes==}, or some other tool running in concert with the platform. 
 
 We rely on industry-standard tools and stacks to deal with logs, such as FluentD, ElasticSearch, and Kibana.
 
+{>>Maybe a section about structured logging<<}
