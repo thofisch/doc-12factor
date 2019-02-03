@@ -4,7 +4,7 @@ When a cloud-native application is disposable, it means they can be started or s
 
 An application cannot scale, deploy, release, or recover rapidly, if it cannot start rapidly and shut down gracefully.
 
-Build applications that not only are aware of this, but also embrace it to take full advantage of the platform.
+To take full advantage of the platform, build applications that not only are aware of this, but also embrace it.
 
 !!! warning "Slow startup time"
     Bringing up an application that takes minutes to get into a steady state:
