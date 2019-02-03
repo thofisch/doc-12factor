@@ -8,4 +8,4 @@ Using externalized [configuration](/configuration) allow applications to do port
 
 ## Kubernetes
 
-{==Anything specific we need to mention in regards to Kubernetes?==}
+{>>Anything specific we need to mention in regards to Kubernetes?<<}

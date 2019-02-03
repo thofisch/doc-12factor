@@ -12,7 +12,7 @@ Going from {==design/code==} to running in production, could take as little as a
 
 The build stage is where a code repository is converted into a versioned, immutable build artifact.
 
-Dependencies are fetched and bundled into the immutable build artifact.
+[Dependencies](/dependency-management) are fetched and bundled into the immutable build artifact.
 
 The immutable build artifact could a ZIP file, a binary executable, or a container image.
 
@@ -24,7 +24,7 @@ The immutability of this artifact coupled with [environment parity](/environment
 
 The release is done by pushing to your {==cloud/PaaS/Kubernetes==} environment.
 
-The output of the build stage is combined with environment configuration information to produce another immutable artifact, a release.
+The output of the build stage is combined with environment [configuration](/configuration) information to produce another immutable artifact, a release.
 
 Releases must to be unique and identifiable, and every release should ideally be tagged with some kind of unique ID, such as a timestamp or an auto-incrementing number.
 

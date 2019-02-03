@@ -15,16 +15,16 @@ Adhering to the following guidelines will help embrace elastic scalability, stat
 
 1. **One Codebase, One Application** &mdash; one codebase tracked in a version control system, many deploys.
 1. **API First** &mdash; gives the ability to work against public contracts without interfering with internal development processes.
-1. **Dependencies** &mdash; explicitly declare and isolate dependencies.
 1. **Build, Release, Run** &mdash; strictly separate build, release and run stages.
-1. **Configurarion** &mdash; store configuration in the environment.
-1. **Logs** &mdash; treat logs as event streams.
+1. **Dependency Management** &mdash; explicitly declare and isolate dependencies.
+1. **Configuration** &mdash; store configuration in the environment.
+1. **Environment Parity** &mdash; keep all environments (development, staging, and production) as similar as possible.
+1. **Stateless Processes** &mdash; execute the application as one or more stateless processes.
+1. **Port Binding** &mdash; export services via port binding.
 1. **Disposability** &mdash; maximize robustness with fast startup and graceful shutdown.
 1. **Backing Services** &mdash; treat backing services as attached resources.
-1. **Environment Parity** &mdash; keep all environments (development, staging, and production) as similar as possible.
-1. **Admin Processes** &mdash; run admin/management tasks as one-off processes.
-1. **Port Binding** &mdash; export services via port binding.
-1. **Stateless Processes** &mdash; execute the application as one or more stateless processes.
+1. **Logs** &mdash; treat logs as event streams.
+1. **Administrative Processes** &mdash; run admin/management tasks as one-off processes.
 1. **Concurrency** &mdash; scale out via the process model.
 1. **Telemetry** &mdash; you cannot control what you cannot measure.
 1. **Authentication and Authorization** &mdash; security should never be an afterthought.

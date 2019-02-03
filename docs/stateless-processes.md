@@ -2,7 +2,7 @@
 
 Applications should execute as a single, stateless process.
 
-It is not that state cannot exist; it is that it must **not** be maintained within the application, meaning that all *long-lasting* state must be external to the application, provided by backing services.
+It is not that state cannot exist; it is that it must **not** be maintained within the application, meaning that all *long-lasting* state must be external to the application, provided by [backing services](/backing-services).
     
 !!! warning "The filesystem is not a backing service"
     You cannot consider files a means by which applications can share data {>>or can you?<<}. Disks in the cloud are ephemeral and, in some cases, even read-only.
@@ -21,4 +21,4 @@ If processes need to share data (e.g., session state), again that data should be
 
 ## Kubernetes
 
-* Should we mention StatefulSets (I'm think no)?
+    {>>Should we mention StatefulSets (I'm thinking no)?<<}
