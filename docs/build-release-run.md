@@ -2,17 +2,19 @@
 
 Going from {==design/code==} to running in production, could take as little as a few minutes, when a mature CI/CD pipeline is in place. Each of the following deployment stages is isolated and occurs separately:
 
-* A single codebase is taken through the build process to produce a **{==compiled/binary==} artifact**.
-* This artifact is then merged with configuration information that is external to the application to produce an **immutable release**.
+* A single codebase is taken through the build process to produce a compiled/binary **immutable build artifact**.
+* This immutable build artifact is then merged with configuration information that is external to the application to produce an **immutable release**.
 * The immutable release is then delivered to an environment (development, QA, production, etc.) and run.
 
 {>>Should we be more Kubernetes specific<<}
 
 ## Build
 
-The build stage is where a code repository is converted into a versioned, {==binary artifact/container image==}.
+The build stage is where a code repository is converted into a versioned, immutable build artifact.
 
-Dependencies are fetched and bundled into the build artifact (a ZIP file or a binary executable or a Docker container image).
+Dependencies are fetched and bundled into the immutable build artifact.
+
+The immutable build artifact could a ZIP file, a binary executable, or a container image.
 
 Builds are created by a CI server, and there is a one-to-many relationship between builds and deployments, so a single build should be able to be released or deployed to any number of environments, and each of those unmodified builds should work as expected.
 
