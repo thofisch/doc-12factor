@@ -1,0 +1,545 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="./assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+    
+    
+      
+        <title>Building Containerized Applications</title>
+      
+    
+    
+      <link rel="stylesheet" href="./assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="./assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="./assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="./assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="./stylesheets/critic.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#introduction" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="." title="Building Containerized Applications" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">build</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Building Containerized Applications
+              </span>
+              <span class="md-header-nav__topic">
+                Introduction
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="." title="Building Containerized Applications" class="md-nav__button md-logo">
+      
+        <i class="md-icon">build</i>
+      
+    </a>
+    Building Containerized Applications
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Introduction
+      </label>
+    
+    <a href="." title="Introduction" class="md-nav__link md-nav__link--active">
+      Introduction
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-native-applications" title="Cloud-native Applications" class="md-nav__link">
+    Cloud-native Applications
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="codebase/" title="One CodeBase, One Application" class="md-nav__link">
+      One CodeBase, One Application
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="api-first/" title="API First" class="md-nav__link">
+      API First
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="build-release-run/" title="Build, Release, Run" class="md-nav__link">
+      Build, Release, Run
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="dependency-management/" title="Dependency Management" class="md-nav__link">
+      Dependency Management
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="configuration/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="environment-parity/" title="Environment Parity" class="md-nav__link">
+      Environment Parity
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="stateless-processes/" title="Stateless Processes" class="md-nav__link">
+      Stateless Processes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="port-binding/" title="Port Binding" class="md-nav__link">
+      Port Binding
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="disposability/" title="Disposability" class="md-nav__link">
+      Disposability
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="backing-services/" title="Backing Services" class="md-nav__link">
+      Backing Services
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="logs/" title="Logs" class="md-nav__link">
+      Logs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="admin-processes/" title="Administrative Processes" class="md-nav__link">
+      Administrative Processes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="concurrency/" title="Concurrency" class="md-nav__link">
+      Concurrency
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="telemetry/" title="Telemetry" class="md-nav__link">
+      Telemetry
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="authn-and-authz/" title="Authentication and Authorization" class="md-nav__link">
+      Authentication and Authorization
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-native-applications" title="Cloud-native Applications" class="md-nav__link">
+    Cloud-native Applications
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
+<p>These guidelines are based on the <a href="https://12factor.net">Twelve-Factor App</a>, and adapted to how we recommend building services and applications ready for the cloud.</p>
+<div class="admonition info">
+<p class="admonition-title">Cloud-native = cloud-ready = cloud-friendly</p>
+<p>Within the context of these guildelines these terms are taking to mean the same, and is all about bringing cloud-centric best practices to software and IT generally, whether that be in the cloud or on premises.</p>
+<p><strong>The key takeaway: <em>cloud-native</em> is more than <em>cloud-only</em>.</strong></p>
+</div>
+<h2 id="cloud-native-applications">Cloud-native Applications<a class="headerlink" href="#cloud-native-applications" title="Permanent link">&para;</a></h2>
+<p>A cloud-native application is designed and implemented to run on a Platform-as-a-Service (PaaS) installation and to embrace horizontal elastic scaling. The platform hides infrastructure details from the application developer.</p>
+<p>Adhering to the following guidelines will help embrace elastic scalability, statelessness, and treating everything as a service, enabling development teams to built applications that can scale and be deployed rapidly:</p>
+<ol>
+<li><strong>One Codebase, One Application</strong> &mdash; one codebase tracked in a version control system, many deploys.</li>
+<li><strong>API First</strong> &mdash; gives the ability to work against public contracts without interfering with internal development processes.</li>
+<li><strong>Build, Release, Run</strong> &mdash; strictly separate build, release and run stages.</li>
+<li><strong>Dependency Management</strong> &mdash; explicitly declare and isolate dependencies.</li>
+<li><strong>Configuration</strong> &mdash; store configuration in the environment.</li>
+<li><strong>Environment Parity</strong> &mdash; keep all environments (development, staging, and production) as similar as possible.</li>
+<li><strong>Stateless Processes</strong> &mdash; execute the application as one or more stateless processes.</li>
+<li><strong>Port Binding</strong> &mdash; export services via port binding.</li>
+<li><strong>Disposability</strong> &mdash; maximize robustness with fast startup and graceful shutdown.</li>
+<li><strong>Backing Services</strong> &mdash; treat backing services as attached resources.</li>
+<li><strong>Logs</strong> &mdash; treat logs as event streams.</li>
+<li><strong>Administrative Processes</strong> &mdash; run admin/management tasks as one-off processes.</li>
+<li><strong>Concurrency</strong> &mdash; scale out via the process model.</li>
+<li><strong>Telemetry</strong> &mdash; you cannot control what you cannot measure.</li>
+<li><strong>Authentication and Authorization</strong> &mdash; security should never be an afterthought.</li>
+</ol>
+<p>As many of these factors feed into each other, following one factor makes it easier to follow another, and so on.</p>
+<p>Don't think about these guidelines as an all-or-nothing approach, but rather learn where and when to compromise when planning and implementing cloud-native applications. <span class="critic comment">should we allow for thought?</span></p>
+<p>When you’re building a new application, force a decision as to why you should not build your application in a cloud-native way.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="codebase/" title="One CodeBase, One Application" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                One CodeBase, One Application
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="./assets/javascripts/application.5c3774b5.js"></script>
+      
+      <script>app.initialize({version:"0.17.5",url:{base:"."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

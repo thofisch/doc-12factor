@@ -1,0 +1,589 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+    
+    
+      
+        <title>Build, Release, Run - Building Containerized Applications</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../stylesheets/critic.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#build-release-run" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Building Containerized Applications" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">build</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Building Containerized Applications
+              </span>
+              <span class="md-header-nav__topic">
+                Build, Release, Run
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Building Containerized Applications" class="md-nav__button md-logo">
+      
+        <i class="md-icon">build</i>
+      
+    </a>
+    Building Containerized Applications
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../codebase/" title="One CodeBase, One Application" class="md-nav__link">
+      One CodeBase, One Application
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../api-first/" title="API First" class="md-nav__link">
+      API First
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Build, Release, Run
+      </label>
+    
+    <a href="./" title="Build, Release, Run" class="md-nav__link md-nav__link--active">
+      Build, Release, Run
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#build" title="Build" class="md-nav__link">
+    Build
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release" title="Release" class="md-nav__link">
+    Release
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run" title="Run" class="md-nav__link">
+    Run
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../dependency-management/" title="Dependency Management" class="md-nav__link">
+      Dependency Management
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../configuration/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../environment-parity/" title="Environment Parity" class="md-nav__link">
+      Environment Parity
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../stateless-processes/" title="Stateless Processes" class="md-nav__link">
+      Stateless Processes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../port-binding/" title="Port Binding" class="md-nav__link">
+      Port Binding
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../disposability/" title="Disposability" class="md-nav__link">
+      Disposability
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../backing-services/" title="Backing Services" class="md-nav__link">
+      Backing Services
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../logs/" title="Logs" class="md-nav__link">
+      Logs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../admin-processes/" title="Administrative Processes" class="md-nav__link">
+      Administrative Processes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../concurrency/" title="Concurrency" class="md-nav__link">
+      Concurrency
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../telemetry/" title="Telemetry" class="md-nav__link">
+      Telemetry
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../authn-and-authz/" title="Authentication and Authorization" class="md-nav__link">
+      Authentication and Authorization
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#build" title="Build" class="md-nav__link">
+    Build
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release" title="Release" class="md-nav__link">
+    Release
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run" title="Run" class="md-nav__link">
+    Run
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="build-release-run">Build, Release, Run<a class="headerlink" href="#build-release-run" title="Permanent link">&para;</a></h1>
+<p>Going from <mark class="critic">design/code</mark> to running in production, could take as little as a few minutes, when a mature CI/CD pipeline is in place. Each of the following deployment stages is isolated and occurs separately:</p>
+<ul>
+<li>A single codebase is taken through the build process to produce a compiled/binary <strong>immutable build artifact</strong>.</li>
+<li>This immutable build artifact is then merged with configuration information that is external to the application to produce an <strong>immutable release</strong>.</li>
+<li>The immutable release is then delivered to an environment (development, QA, production, etc.) and run.</li>
+</ul>
+<span class="critic comment">Should we be more Kubernetes specific</span>
+<h2 id="build">Build<a class="headerlink" href="#build" title="Permanent link">&para;</a></h2>
+<p>The build stage is where a code repository is converted into a versioned, immutable build artifact.</p>
+<p><a href="../dependency-management">Dependencies</a> are fetched and bundled into the immutable build artifact.</p>
+<p>The immutable build artifact could a ZIP file, a binary executable, or a container image.</p>
+<p>Builds are created by a CI server, and there is a one-to-many relationship between builds and deployments, so a single build should be able to be released or deployed to any number of environments, and each of those unmodified builds should work as expected.</p>
+<p>The immutability of this artifact coupled with <a href="../environment-parity">environment parity</a> give you confidence that your applications will work in production if it worked in QA.</p>
+<h2 id="release">Release<a class="headerlink" href="#release" title="Permanent link">&para;</a></h2>
+<p>The release is done by pushing to your <mark class="critic">cloud/PaaS/Kubernetes</mark> environment.</p>
+<p>The output of the build stage is combined with environment <a href="../configuration">configuration</a> information to produce another immutable artifact, a release.</p>
+<p>Releases must to be unique and identifiable, and every release should ideally be tagged with some kind of unique ID, such as a timestamp or an auto-incrementing number.</p>
+<span class="critic comment">Considering the one-to-many relationship between builds and releases, does it makes sense that releases should be tagged with the build ID (build+env)? We &quot;cheat&quot; a bit with our manifests being copied as build artifacts and then &quot;transformed&quot; during the release phase. I don't like that we cannot pull down a complete release without looking through VSTS (are variables versioned, etc)</span>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>A lot of problems can arise from the inability to reproduce a release as it appeared at one point in the past.</p>
+<p>Having a separate release phase, and storing those artifacts, enable easy rollback <span class="critic comment">but do we want it?</span> and historical auditing.</p>
+</div>
+<h2 id="run">Run<a class="headerlink" href="#run" title="Permanent link">&para;</a></h2>
+<p>The run phase is done by the <mark class="critic">cloud provider/PaaS/Kubernetes</mark>.</p>
+<p>When an application is running, the platform is responsible for keeping it alive, monitoring its health, aggregating its logs, as well as a lot of other administrative tasks like dynamic scaling and fault tolerance.</p>
+<div class="admonition info">
+<p class="admonition-title">Run locally</p>
+<p>In order for developers to feel unhindered while working on cloud-native applications, it is <mark class="critic">almost</mark> always worth the extra effort of ensuring that developers can run an application locally on their workstations, while still allowing it to be deployed via CD pipeline.</p>
+<p>Using Docker and/or Minikube help create near-clones of production systems.</p>
+</div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../api-first/" title="API First" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                API First
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../dependency-management/" title="Dependency Management" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Dependency Management
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.5c3774b5.js"></script>
+      
+      <script>app.initialize({version:"0.17.5",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
