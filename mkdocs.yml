@@ -13,47 +13,45 @@ theme:
   palette:
     primary: indigo
     accent: indigo
-  logo: #imgs/logo.png
-    icon: build
+  icon:
+    logo: material/cloud-cog
 
 markdown_extensions:
-- admonition
-- codehilite:
-    guess_lang: false
-    linenums: false
-- footnotes
-- toc:
-    permalink: true
-- pymdownx.caret
-- pymdownx.critic
-- pymdownx.details
-- pymdownx.inlinehilite
-- pymdownx.magiclink
-- pymdownx.mark
-- pymdownx.smartsymbols
-- pymdownx.superfences
-- pymdownx.tasklist:
-    custom_checkbox: true
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: false
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 extra_css:
-  - 'stylesheets/critic.css'
+  - "stylesheets/critic.css"
 
-pages:
-- Introduction: index.md
-- One CodeBase, One Application: codebase.md
-- API First: api-first.md
-- Build, Release, Run: build-release-run.md
-- Dependency Management: dependency-management.md
-- Configuration: configuration.md
-- Environment Parity: environment-parity.md
-- Stateless Processes: stateless-processes.md
-- Port Binding: port-binding.md
-- Disposability: disposability.md
-- Backing Services: backing-services.md
-- Logs: logs.md
-- Administrative Processes: admin-processes.md
-- Concurrency: concurrency.md
-- Telemetry: telemetry.md
-- Authentication and Authorization: authn-and-authz.md
-
-
+nav:
+  - Introduction: index.md
+  - One CodeBase, One Application: codebase.md
+  - API First: api-first.md
+  - Build, Release, Run: build-release-run.md
+  - Dependency Management: dependency-management.md
+  - Configuration: configuration.md
+  - Environment Parity: environment-parity.md
+  - Stateless Processes: stateless-processes.md
+  - Port Binding: port-binding.md
+  - Disposability: disposability.md
+  - Backing Services: backing-services.md
+  - Logs: logs.md
+  - Administrative Processes: admin-processes.md
+  - Concurrency: concurrency.md
+  - Telemetry: telemetry.md
+  - Authentication and Authorization: authn-and-authz.md
